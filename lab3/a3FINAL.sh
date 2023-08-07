@@ -12,6 +12,6 @@ createFile()
 }
 
 
-createFile C:/Users/arya2/source/repos/LinuxCode/lab3/ testinf.sh
+createFile 
 
 
