@@ -1,0 +1,5 @@
+accept 2 string and find leght with read
+check which is longer
+convert strign 1 into reverse string
+check string 1 is palindromwe or not
+str concat
