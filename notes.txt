@@ -31,3 +31,18 @@ macro
     to display a num
 func
     to diplay two nums
+
+
+
+
+??_________________________ all below in word file
+
+        assignment no
+Title:
+THeory/Logic:
+Mathematics:
+Algorithm:
+Data Flow:
+Comclusion:
+Program:
+O/P screenshot (print name, roll no, class, etc then assignment)
