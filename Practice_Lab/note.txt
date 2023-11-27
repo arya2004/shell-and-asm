@@ -1,0 +1,161 @@
+bootloader: program that bots Os
+desktop env: gnome, kde, xfce
+
+cat: type or combine files
+head: show few lines of files
+tail: last few lines of file
+man: documentation
+| : used o/p of one as i/p of other
+
+form: cmd -options args
+
+apps in : /bin /opt or /sbin
+
+
+ABsolute PAth start with /
+relative with:
+./ : pressent dit
+../  : parent dir
+~  : hume dir
+///usr//bin => /usr/bin
+
+
+HardLinks
+ln existfile linkfile
+ls -li file1 file2  => prints inode no, unique for file. same for hardlink
+> if one file removed, inode remain. if modified, might break link
+
+SOftlink
+ln -s existfile linkname
+can point to file/obj in other dir/ non existing.
+dangling link: obj dont exist
+
+
+PS1 to change username
+
+
+3 file streams avail when cmd exec:
+stdin
+stdout
+stderr
+
+>i/o redirection: doesnt work for errors
+do_smthg > output-file
+input_file < do_smthg
+
+do_smthg 2> error-file
+
+>Pipes:
+    pipe o/p of one to i/p of other
+    no need to same file in temp file
+
+>locate: search on prev database. matches character of specified string
+>grep : prints 1 or more specified string
+
+
+Wildcard
+? match single character  
+* match any string of char
+[set] matches any in set
+[!set] opposite 
+
+find
+- name : certain pattern
+- iname : ignore case
+- type : d dir, l link, f file
+find /usr -type -d -name gcc : finds dir with name gcc
+- exec  
+find -name "*.swp" -exec rm {} ';'
+find / -ctime 3 :  based on time created (days)  +in -in -cmin -amin -mmin
+find / -size 0 : 512 byte block
+
+
+DOcs:
+man touch
+help cd
+
+
+diff: conpare txt files
+-c
+-r : recursive
+-i : ignore cases
+-w : ignore whitespaces
+-q : doesnt list difference, wihtout listing
+
+cmp : compare binary files
+
+file * : tell type of file
+
+cp: src dest
+rsync: can ziegler@g14 arya@win10
+
+
+history: wiews hisstory of cmd
+history | tail -20
+
+
+file perm: read write exec
+user/grp/other
+drwxrwxrwx
+
+
+#FIle manupalition
+cat: concatinate
+
+sed: stream editor
+sed s/pattern/replace_string/g file  #sub first occurence in every line
+sed 1,3s/pattern/replace_string/g file #sub all occurence in every line
+sed 1,3s/pattern/replace_string/g file #sub all occurence in range of lines
+sed -i s/pattern/replace_string/g file #save changes all occurence in same fiel 
+
+awk: manupulate data file
+
+sort <filename>
+sort -r : reverse
+sort -k 3 file : sort line by 3rd field instread of first
+sort -u : uniq
+
+
+unique : remove dup consev lines
+sort f1 f2 | uniq > f3
+dort -u f1 f2 > f3
+uniq -c fine : count duplicates
+
+
+paste
+
+paste -d : delemeter
+-s : append in series
+paste -d, f1 f2
+
+
+join : joins based on common field
+join f1 f2
+
+
+split: splits file
+split infile
+
+
+REGEX
+a..  match azy, auu
+b.|j.  match ba OR ji
+..$   match og
+l.*  match lazy dog
+l.*y    match lazy
+the.*   match whole sentence
+
+grep: searching tool
+grep [pattern] <file>
+grep -v [pattern] <file> : not pattern
+
+grep [0-9] <file>: line containing 0 to 9
+grep -C 3 <file> : print content of lines max 3
+
+
+tr: edit
+tr [option] set1 [set2]
+cat city.txt | tr a-z A-Z  
+
+tee: display and save in file
+ls -l | tee fie
